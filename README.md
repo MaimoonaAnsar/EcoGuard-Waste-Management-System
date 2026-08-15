@@ -1,4 +1,4 @@
-# EcoGuard – Waste Management System🌳🥬
+# EcoGuard – Waste Management System🌳
 
 **EcoGuard** is a web-based waste management system designed to improve how waste-related services are managed and coordinated between citizens and local authorities.The system was designed as our final project in our Diploma in Software Engineering we later improvised it by adding more features as per the guidance provided 
 
