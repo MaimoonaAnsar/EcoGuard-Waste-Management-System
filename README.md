@@ -10,87 +10,87 @@ The system provides a digital platform where citizens can report waste-related i
 - LA(local Authority)-Equal to the city council level
 - DS(Divisional Secretariat)-As the divisional level
 - Admin- Incharge of all 
+## 👤 Citizen
 
-👤 **Citizen**
-Register and log in to the system
-Manage personal profile
-Submit waste-related complaints
-View submitted complaints and their status
-View complaint updates/escalations
-Submit special waste pickup requests
-Provide pickup address and map location
-Select waste type and preferred pickup date
-Add additional notes to pickup requests
-View the status of special pickup requests
-View received certificates
-Participate in volunteer events
-View available waste management information/services
+- Register and log in to the system
+- Manage personal profile
+- Submit waste-related complaints
+- View submitted complaints and their status
+- View complaint updates and escalations
+- Submit special waste pickup requests
+- Provide pickup address and map location
+- Select waste type and preferred pickup date
+- Add notes to pickup requests
+- View special pickup request status
+- View received certificates
+- Participate in volunteer events
+- View available waste-management information and services
 
-🏘️ **Grama Niladhari (GN)**
-Log in to the GN dashboard
-View complaints within their assigned area
-Review citizen complaints
-Handle/update complaints
-Escalate serious complaints to the DS
-Manage relevant community waste-management activities
-Manage/view certificates where applicable
-Participate in coordinating community environmental activities
+## 🏘️ Grama Niladhari (GN)
 
-🏢 **Local Authority (LA)**
-Log in to the LA dashboard
-Manage waste-management operations
-View and manage waste-related complaints
-Manage waste collection/truck schedules
-Update collection schedules
-Manage special pickup operations where applicable
-Coordinate waste collection activities
-Monitor waste-management activities
-Manage relevant volunteer/community activities
+- Log in to the GN dashboard
+- View complaints within the assigned area
+- Review citizen complaints
+- Handle and update complaints
+- Escalate serious complaints to the DS
+- Manage relevant community waste-management activities
+- Manage and view certificates where applicable
+- Coordinate community environmental activities
 
-🏛️ **Divisional Secretariat (DS)**
-Log in to the DS dashboard
-View complaints assigned/escalated to the DS
-View complete complaint details
-Review complaint severity and status
-Manage special pickup requests submitted by citizens
-View citizen details and pickup information
-View pickup location using an interactive Leaflet map
-Schedule special pickups
-Reject special pickup requests
-Mark scheduled pickups as completed
-Track pickup request status
-Manage personal profile
+## 🏢 Local Authority (LA)
 
-🔐 **Admin**
-Manage system users
-Manage user roles
-Manage citizens, DS officers, GNs and LAs
-Manage system-wide complaints
-Monitor waste-management activities
-Manage certificates
-Manage volunteer events
-View volunteers who participated in events
-Manage system information/content
-Monitor overall system activity
+- Log in to the LA dashboard
+- Manage waste-management operations
+- View and manage waste-related complaints
+- Manage waste collection and truck schedules
+- Update collection schedules
+- Manage special pickup operations where applicable
+- Coordinate waste collection activities
+- Monitor waste-management activities
+- Manage relevant volunteer and community activities
 
+## 🏛️ Divisional Secretariat (DS)
 
-⭐ **Special Functions of EcoGuard**
-These are the features that make the system more than just a basic complaint-management system:
+- Log in to the DS dashboard
+- View complaints assigned or escalated to the DS
+- View complete complaint details
+- Review complaint severity and status
+- Manage special pickup requests submitted by citizens
+- View citizen details and pickup information
+- View pickup locations using an interactive Leaflet map
+- Schedule special pickups
+- Reject special pickup requests
+- Mark scheduled pickups as completed
+- Track pickup request status
+- Manage personal profile
 
-Special Function	Description
-🗺️ Interactive Maps	Leaflet maps display complaint/pickup locations using latitude and longitude
-🚛 Special Waste Pickup	Citizens can request collection for waste that cannot be handled through normal collection
-📅 Pickup Scheduling	DS can schedule requested pickups
-🔄 Request Status Tracking	Pickup requests move through Pending → Scheduled → Completed/Rejected
-📍 Location-Based Requests	Pickup requests store the exact location of the waste
-🚨 Complaint Escalation	Serious complaints can be escalated to the DS
-🏆 Digital Certificates	Citizens can receive certificates for relevant environmental participation
-🌱 Volunteer Events	Citizens can participate in environmental/clean-up activities
-👥 Volunteer Management	Admin can view and manage participants of volunteer events
-🚚 Waste Collection Scheduling	LA can manage waste collection/truck schedules
-🔐 Role-Based Access	Different users receive different dashboards and permissions
-📊 Centralized Management	Waste complaints, pickups, events, certificates and collection activities are managed through one system
+## 🔐 Administrator
 
+- Manage system users
+- Manage user roles
+- Manage citizens, DS officers, GNs and LAs
+- Manage system-wide complaints
+- Monitor waste-management activities
+- Manage certificates
+- Manage volunteer events
+- View volunteers who participated in events
+- Manage system information and content
+- Monitor overall system activity
+
+## ⭐ Special Functions of EcoGuard
+
+- 🗺️ **Interactive Maps** – Displays complaint and special pickup locations using latitude and longitude
+- 🚛 **Special Waste Pickup** – Allows citizens to request collection for waste that cannot be handled through normal collection
+- 📅 **Pickup Scheduling** – Allows the DS to schedule requested pickups
+- 🔄 **Request Status Tracking** – Tracks requests through Pending → Scheduled → Completed/Rejected
+- 📍 **Location-Based Requests** – Stores the exact location of the requested waste pickup
+- 🚨 **Complaint Escalation** – Allows serious complaints to be escalated to the DS
+- 🏆 **Digital Certificates** – Provides certificates to citizens for relevant environmental participation
+- 🌱 **Volunteer Events** – Allows citizens to participate in environmental and clean-up activities
+- 👥 **Volunteer Management** – Allows the Admin to view and manage event participants
+- 🚚 **Waste Collection Scheduling** – Allows the LA to manage waste collection and truck schedules
+- 🔐 **Role-Based Access** – Provides different dashboards and permissions for each user role
+- 📊 **Centralized Management** – Manages complaints, special pickups, events, certificates and waste collection activities through one system
 ### Technologies used
 
 * PHP
