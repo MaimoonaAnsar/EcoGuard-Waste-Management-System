@@ -1,0 +1,142 @@
+/* =========================
+   Google Fonts
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* =========================
+   Root Variables
+========================= */
+:root {
+    --primary-color: #06512a;
+    --secondary-color: #f4f4f4;
+    --button-color: #06512a;
+    --button-hover: #04381b;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Roboto', sans-serif;
+    --shadow-sm: 0 2px 6px rgba(0,0,0,0.15);
+    --shadow-lg: 0 6px 18px rgba(0,0,0,0.2);
+    --off-white: #fdfdfd;
+    --gray-text: #666;
+}
+
+/* =========================
+   Global Styles
+========================= */
+body {
+    font-family: var(--font-body);
+    background-color: var(--secondary-color);
+    margin: 0;
+    color: #333;
+    padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* =========================
+   Table Styling
+========================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    background-color: white;
+    margin-bottom: 25px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background: linear-gradient(135deg, var(--primary-color), #1b4332);
+    color: white;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+td {
+    color: #444;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #e9f5ee;
+    transform: scale(1.01);
+    transition: all 0.2s ease;
+}
+
+/* =========================
+   Links and Buttons
+========================= */
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--button-hover);
+    text-decoration: underline;
+}
+
+button {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, var(--primary-color), #1b4332);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: var(--button-hover);
+    transform: translateY(-2px);
+}
+
+/* Delete Link Special */
+a[href*="delete_event"] {
+    color: white;
+    background-color: #c73f3f;
+    padding: 6px 12px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+a[href*="delete_event"]:hover {
+    background-color: #a00000;
+    text-decoration: none;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    table, th, td {
+        font-size: 13px;
+    }
+
+    button {
+        width: 100%;
+        text-align: center;
+    }
+}

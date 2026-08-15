@@ -1,0 +1,220 @@
+/* =========================
+   Google Fonts
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* =========================
+   Root Variables
+========================= */
+:root {
+    --primary-color: #06512a;
+    --secondary-color: #f4f4f4;
+    --button-color: #06512a;
+    --button-hover: #04381b;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Roboto', sans-serif;
+    --shadow-sm: 0 2px 6px rgba(0,0,0,0.15);
+    --shadow-lg: 0 6px 18px rgba(0,0,0,0.2);
+    --off-white: #fdfdfd;
+    --gray-text: #666;
+}
+
+/* =========================
+   Global Styles
+========================= */
+body {
+    font-family: var(--font-body);
+    background-color: #fafafa;
+    color: #333;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* =========================
+   Dashboard Layout
+========================= */
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* =========================
+   Sidebar
+========================= */
+.sidebar {
+    width: 260px;
+    background: linear-gradient(180deg, #f4f4f4, #e8f5ec);
+    padding: 20px;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Profile Info in Sidebar */
+.sidebar h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.3rem;
+}
+
+.sidebar p {
+    margin: 0 0 5px 0;
+    font-size: 0.9rem;
+    color: var(--gray-text);
+}
+
+/* Sidebar Buttons */
+.sidebar button {
+    background: linear-gradient(135deg, var(--primary-color), #1b4332);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sidebar button:hover {
+    transform: translateY(-2px);
+    background: var(--button-hover);
+}
+
+/* =========================
+   Main Content
+========================= */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    background-color: #fff;
+}
+
+/* Top Buttons in Main Content */
+.admin-buttons button {
+    background: linear-gradient(135deg, var(--primary-color), #1b4332);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.admin-buttons button:hover {
+    background: var(--button-hover);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   Table Styling
+========================= */
+.main-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Table Header */
+.main-content th {
+    background: linear-gradient(135deg, var(--primary-color), #1b4332);
+    color: #fff;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+/* Table Cells */
+.main-content td {
+    padding: 14px;
+    font-size: 14px;
+    color: #444;
+}
+
+/* Zebra Rows */
+.main-content tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover Effect */
+.main-content tr {
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.main-content tr:hover {
+    background-color: #e9f5ee;
+    transform: scale(1.01);
+}
+
+/* First Column Highlight */
+.main-content td:first-child {
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+/* Truncate long text */
+.main-content td:nth-child(2) {
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* =========================
+   Status Labels
+========================= */
+.status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+    color: white;
+    text-transform: capitalize;
+}
+
+.status.pending { background-color: #f4a261; }
+.status.inprogress { background-color: #2a9d8f; }
+.status.completed { background-color: #2b9348; }
+.status.rejected { background-color: #d00000; }
+
+/* =========================
+   Responsive Design
+========================= */
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        box-shadow: none;
+        padding: 15px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .main-content td:nth-child(2) {
+        max-width: 150px;
+    }
+
+    .admin-buttons button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

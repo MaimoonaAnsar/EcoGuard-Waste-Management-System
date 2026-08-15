@@ -1,0 +1,165 @@
+/* =========================
+   Google Fonts
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* =========================
+   Root Variables
+========================= */
+:root {
+    --primary-color: #06512a;
+    --secondary-color: #f4f4f4;
+    --button-color: #06512a;
+    --button-hover: #04381b;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Roboto', sans-serif;
+    --shadow-sm: 0 2px 6px rgba(0,0,0,0.15);
+    --shadow-lg: 0 6px 18px rgba(0,0,0,0.2);
+    --off-white: #fdfdfd;
+    --gray-text: #666;
+}
+
+/* =========================
+   Global Styles
+========================= */
+body {
+    font-family: var(--font-body);
+    background-color: var(--secondary-color);
+    margin: 0;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* =========================
+   Dashboard Layout
+========================= */
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+    gap: 20px;
+}
+
+/* =========================
+   Sidebar (reuse styles from dashboard)
+========================= */
+.sidebar {
+    width: 260px;
+    background: linear-gradient(180deg, #f4f4f4, #e8f5ec);
+    padding: 20px;
+    box-shadow: var(--shadow-lg);
+}
+
+/* =========================
+   Main Content
+========================= */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    background-color: var(--off-white);
+}
+
+/* =========================
+   Forms
+========================= */
+.main-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 20px;
+}
+
+.main-content input,
+.main-content select,
+.main-content textarea {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: var(--font-body);
+}
+
+.main-content input:focus,
+.main-content select:focus,
+.main-content textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* =========================
+   Buttons
+========================= */
+.main-content button {
+    width: fit-content;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--primary-color), #1b4332);
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.main-content button:hover {
+    background: var(--button-hover);
+    transform: translateY(-2px);
+}
+
+/* Delete Button Specific */
+.main-content button[name="delete_user"] {
+    background-color: #d00000;
+    color: white;
+}
+
+.main-content button[name="delete_user"]:hover {
+    background-color: #a00000;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   Messages
+========================= */
+.main-content p {
+    font-weight: 500;
+}
+
+/* =========================
+   Labels
+========================= */
+.main-content label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: var(--primary-color);
+}
+
+/* =========================
+   Responsive Design
+========================= */
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .main-content form {
+        padding: 15px;
+    }
+}

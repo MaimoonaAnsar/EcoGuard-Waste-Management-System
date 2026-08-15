@@ -1,0 +1,226 @@
+/* =========================
+   Google Fonts
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* =========================
+   Root Variables
+========================= */
+:root {
+    --primary-color: #06512a;
+    --secondary-color: #f4f4f4;
+    --button-color: #06512a;
+    --button-hover: #04381b;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Roboto', sans-serif;
+    --shadow-sm: 0 2px 6px rgba(0,0,0,0.15);
+    --shadow-lg: 0 6px 18px rgba(0,0,0,0.2);
+    --off-white: #fdfdfd;
+    --gray-text: #666;
+}
+
+/* =========================
+   Global
+========================= */
+body {
+    font-family: var(--font-body);
+    background-color: #fafafa;
+    margin: 0;
+    color: #333;
+}
+
+/* =========================
+   Container
+========================= */
+.container {
+    width: 95%;
+    margin: auto;
+    padding: 20px;
+}
+
+/* =========================
+   Headings
+========================= */
+h1 {
+    font-family: var(--font-heading);
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* =========================
+   Header Info
+========================= */
+p {
+    text-align: center;
+    color: var(--gray-text);
+}
+
+/* =========================
+   Box Sections
+========================= */
+.box {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    transition: 0.3s;
+}
+
+.box:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+/* =========================
+   Flex Cards (Summary)
+========================= */
+.flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.card {
+    flex: 1;
+    background: linear-gradient(135deg, #e8f5ec, #f4f4f4);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.card p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #222;
+}
+
+/* =========================
+   Filters Section
+========================= */
+.filters form {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filters label {
+    font-weight: 500;
+}
+
+.filters select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* =========================
+   Buttons
+========================= */
+.btn {
+    background: linear-gradient(135deg, #06512a, #1b4332);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--button-hover);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   Tables (Same Style)
+========================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Header */
+th {
+    background: linear-gradient(135deg, #06512a, #1b4332);
+    color: white;
+    padding: 14px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+/* Cells */
+td {
+    padding: 12px;
+    font-size: 14px;
+}
+
+/* Zebra */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover */
+tr:hover {
+    background-color: #e9f5ee;
+    transform: scale(1.01);
+}
+
+/* First column highlight */
+td:first-child {
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+/* =========================
+   Status Styling (Updated)
+========================= */
+.status {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: white;
+    display: inline-block;
+}
+
+.status.Pending { background: #f4a261; }
+.status.Resolved { background: #2b9348; }
+.status.Escalated { background: #d00000; }
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 768px) {
+    .flex {
+        flex-direction: column;
+    }
+
+    .filters form {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

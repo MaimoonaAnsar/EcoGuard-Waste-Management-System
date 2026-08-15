@@ -1,0 +1,197 @@
+/* =========================
+   Google Fonts
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* =========================
+   Root Variables
+========================= */
+:root {
+    --primary-color: #06512a;
+    --secondary-color: #f4f4f4;
+    --button-color: #06512a;
+    --button-hover: #04381b;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Roboto', sans-serif;
+    --shadow-sm: 0 2px 6px rgba(0,0,0,0.15);
+    --shadow-lg: 0 6px 18px rgba(0,0,0,0.2);
+    --off-white: #fdfdfd;
+    --gray-text: #666;
+}
+
+/* =========================
+   Global Styles
+========================= */
+body {
+    font-family: var(--font-body);
+    background-color: #fafafa;
+    color: #333;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+}
+
+/* Header */
+header {
+    background: white;
+    padding: 20px 30px;
+    box-shadow: var(--shadow-sm);
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* =========================
+   Dashboard Layout
+========================= */
+.dashboard {
+    display: flex;
+    min-height: calc(100vh - 80px);
+}
+
+/* =========================
+   Sidebar
+========================= */
+.sidebar {
+    width: 260px;
+    background: linear-gradient(180deg, #f4f4f4, #e8f5ec);
+    padding: 20px;
+    box-shadow: var(--shadow-lg);
+}
+
+/* Sidebar Text */
+.sidebar h3 {
+    margin-bottom: 10px;
+}
+
+.sidebar p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: var(--gray-text);
+}
+
+/* Sidebar Buttons */
+.sidebar button {
+    width: 100%;
+    background: linear-gradient(135deg, #06512a, #1b4332);
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sidebar button:hover {
+    background: var(--button-hover);
+    transform: translateY(-2px);
+}
+
+.sidebar hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+/* =========================
+   Main Content
+========================= */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    background-color: #fff;
+}
+
+/* =========================
+   Table Styling
+========================= */
+.main-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Table Header */
+.main-content th {
+    background: linear-gradient(135deg, #06512a, #1b4332);
+    color: #fff;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 14px;
+    text-transform: uppercase;
+}
+
+/* Table Cells */
+.main-content td {
+    padding: 14px;
+    font-size: 14px;
+    color: #444;
+}
+
+/* Zebra Rows */
+.main-content tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover Effect */
+.main-content tr {
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.main-content tr:hover {
+    background-color: #e9f5ee;
+    transform: scale(1.01);
+}
+
+/* First Column Highlight */
+.main-content td:first-child {
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+/* =========================
+   Status Labels
+========================= */
+.status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+    color: white;
+}
+
+/* Match DB values */
+.status.pending { background-color: #f4a261; }
+.status.in-progress { background-color: #2a9d8f; }
+.status.completed { background-color: #2b9348; }
+.status.rejected { background-color: #d00000; }
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+}

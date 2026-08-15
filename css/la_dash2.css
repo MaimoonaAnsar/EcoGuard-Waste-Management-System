@@ -1,0 +1,214 @@
+/* =========================
+   Google Fonts
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* =========================
+   Root Variables
+========================= */
+:root {
+    --primary-color: #06512a; /* Dark Green */
+    --secondary-color: #f4f4f4; /* Off-white background */
+    --button-color: #06512a;
+    --button-hover: #04381b;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Roboto', sans-serif;
+    --shadow-sm: 0 2px 6px rgba(0,0,0,0.15);
+    --shadow-lg: 0 6px 18px rgba(0,0,0,0.2);
+    --gray-text: #666;
+    --status-pending: #f0ad4e;
+    --status-inprogress: #5bc0de;
+    --status-completed: #5cb85c;
+}
+
+/* =========================
+   Global Styles
+========================= */
+body {
+    font-family: var(--font-body);
+    background-color: var(--secondary-color);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* =========================
+   Layout
+========================= */
+.dashboard {
+    display: flex;
+    min-height: 80vh;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* =========================
+   Sidebar
+========================= */
+.sidebar {
+    width: 260px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.sidebar p {
+    font-size: 14px;
+    color: var(--gray-text);
+    margin: 2px 0;
+}
+
+.sidebar button {
+    background: linear-gradient(135deg, var(--button-color), #1b4332);
+    color: white;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.sidebar button:hover {
+    background: var(--button-hover);
+    transform: translateY(-2px);
+}
+
+.sidebar hr {
+    margin: 15px 0;
+    border: none;
+    border-top: 1px solid #eee;
+}
+
+/* =========================
+   Main Content
+========================= */
+.main-content {
+    flex-grow: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+}
+
+.main-content h2 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* =========================
+   Table Styling
+========================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+thead th {
+    background: linear-gradient(135deg, var(--primary-color), #1b4332);
+    color: #fff;
+    padding: 12px;
+    font-weight: 500;
+    text-align: left;
+    font-size: 14px;
+}
+
+tbody td {
+    padding: 12px;
+    font-size: 14px;
+    color: #444;
+    border-bottom: 1px solid #eee;
+}
+
+/* Zebra Rows */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover Effect */
+tbody tr {
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+tbody tr:hover {
+    background-color: #e9f5ee;
+    transform: scale(1.01);
+}
+
+/* Status Badge */
+.status {
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    display: inline-block;
+}
+
+.status.pending {
+    background-color: var(--status-pending);
+}
+
+.status.inprogress {
+    background-color: var(--status-inprogress);
+}
+
+.status.completed {
+    background-color: var(--status-completed);
+}
+
+/* =========================
+   Responsive Design
+========================= */
+@media (max-width: 1024px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    table, th, td {
+        font-size: 13px;
+    }
+
+    .sidebar button {
+        width: 100%;
+        margin-top: 8px;
+    }
+}

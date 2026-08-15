@@ -1,0 +1,140 @@
+/* =========================
+   Google Fonts
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* =========================
+   Root Variables
+========================= */
+:root {
+    --primary-color: #06512a;
+    --secondary-color: #f4f4f4;
+    --button-color: #06512a;
+    --button-hover: #04381b;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Roboto', sans-serif;
+    --shadow-sm: 0 2px 6px rgba(0,0,0,0.15);
+    --shadow-lg: 0 6px 18px rgba(0,0,0,0.2);
+    --off-white: #fdfdfd;
+    --gray-text: #666;
+}
+
+/* =========================
+   Global Styles
+========================= */
+body {
+    font-family: var(--font-body);
+    background-color: var(--secondary-color);
+    color: #333;
+    margin: 0;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* =========================
+   Container
+========================= */
+.container {
+    max-width: 700px;
+    margin: 50px auto 80px auto;
+    padding: 0 15px;
+}
+
+/* Page Heading */
+.container h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* =========================
+   Messages
+========================= */
+.message {
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+    box-shadow: var(--shadow-sm);
+}
+
+.message.success {
+    background: #e6f7ec;
+    color: #1b4332;
+}
+
+.message.error {
+    background: #ffe5e5;
+    color: #b00020;
+}
+
+/* =========================
+   Profile Form
+========================= */
+.profile-form {
+    background: var(--off-white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+}
+
+.profile-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.profile-form input {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.profile-form input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(6,81,42,0.1);
+}
+
+/* Submit Button */
+.profile-form button {
+    display: inline-block;
+    background: linear-gradient(135deg, #06512a, #1b4332);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.profile-form button:hover {
+    background: var(--button-hover);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   Responsive Design
+========================= */
+@media (max-width: 768px) {
+    .container {
+        margin: 30px 20px;
+    }
+
+    .profile-form {
+        padding: 20px;
+    }
+}

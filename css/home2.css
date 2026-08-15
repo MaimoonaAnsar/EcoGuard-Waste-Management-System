@@ -1,0 +1,144 @@
+/* =========================
+   Google Fonts
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* =========================
+   Root Variables
+========================= */
+:root {
+    --primary-color: #06512a;
+    --secondary-color: #f4f4f4;
+    --button-color: #06512a;
+    --button-hover: #04381b;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Roboto', sans-serif;
+    --shadow-sm: 0 2px 6px rgba(0,0,0,0.15);
+    --shadow-lg: 0 6px 18px rgba(0,0,0,0.2);
+    --off-white: #fdfdfd;
+    --gray-text: #666;
+}
+
+/* =========================
+   Global Styles
+========================= */
+body {
+    font-family: var(--font-body);
+    background: linear-gradient(135deg, #e0f7e5, #fafafa);
+    color: #333;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================
+   Container
+========================= */
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* =========================
+   Header
+========================= */
+header h1 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   Main Section
+========================= */
+.description {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #444;
+    max-width: 700px;
+}
+
+.description strong {
+    color: var(--primary-color);
+}
+
+/* =========================
+   Buttons
+========================= */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 18px 40px;       /* bigger height and width */
+    font-size: 18px;          /* larger text */
+    font-weight: 600;         /* slightly bolder */
+    border: none;
+    border-radius: 10px;      /* slightly more rounded for style */
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    color: white;
+    text-decoration: none;
+}
+
+.btn.login {
+    background: linear-gradient(135deg, #2b9348, #1b5e20);
+}
+
+.btn.register {
+    background: linear-gradient(135deg, #2b9348, #1b5e20);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn.login:hover {
+    background: var(--button-hover);
+}
+
+.btn.register:hover {
+    background: #196619;
+}
+
+/* =========================
+   Footer
+========================= */
+footer {
+    margin-top: auto;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 13px;
+    color: var(--gray-text);
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 600px) {
+    .buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+}

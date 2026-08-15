@@ -1,0 +1,112 @@
+/* Page background */
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+background:#eef7ee;
+margin:0;
+padding:0;
+color:#333;
+}
+
+
+/* Main container */
+
+.container{
+width:850px;
+margin:40px auto;
+background:white;
+padding:30px;
+border-radius:8px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+
+/* Headings */
+
+h2{
+color:#1b5e20;
+margin-bottom:20px;
+}
+
+h3{
+color:#2e7d32;
+margin-top:25px;
+}
+
+
+/* Complaint info */
+
+p{
+margin:8px 0;
+font-size:15px;
+}
+
+b{
+color:#1b5e20;
+}
+
+
+/* Forms */
+
+form{
+margin-top:10px;
+}
+
+textarea{
+width:100%;
+height:120px;
+padding:10px;
+border:1px solid #ccc;
+border-radius:5px;
+resize:vertical;
+font-size:14px;
+}
+
+select{
+padding:8px;
+width:250px;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+
+/* Buttons */
+
+button{
+background:#2e7d32;
+color:white;
+border:none;
+padding:10px 16px;
+font-size:14px;
+border-radius:5px;
+cursor:pointer;
+transition:0.2s;
+}
+
+button:hover{
+background:#1b5e20;
+}
+
+
+/* Notes section */
+
+.note{
+background:#f3f9f3;
+padding:12px;
+border-left:5px solid #2e7d32;
+margin-bottom:10px;
+border-radius:4px;
+}
+
+small{
+color:#666;
+}
+
+
+/* Divider */
+
+hr{
+border:none;
+border-top:1px solid #ddd;
+margin:20px 0;
+}

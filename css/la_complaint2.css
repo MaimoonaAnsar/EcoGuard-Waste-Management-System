@@ -1,0 +1,173 @@
+/* =========================
+   Google Fonts
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* =========================
+   Root Variables
+========================= */
+:root {
+    --primary-color: #06512a;
+    --secondary-color: #f4f4f4;
+    --button-color: #06512a;
+    --button-hover: #04381b;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Roboto', sans-serif;
+    --shadow-sm: 0 2px 6px rgba(0,0,0,0.15);
+    --shadow-lg: 0 6px 18px rgba(0,0,0,0.2);
+    --gray-text: #666;
+    --off-white: #fdfdfd;
+}
+
+/* =========================
+   Global Styles
+========================= */
+body {
+    font-family: var(--font-body);
+    background-color: #fafafa;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* =========================
+   Complaint Page Styles
+========================= */
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 14px;
+    color: #444;
+    margin: 6px 0;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e2e2e2;
+    margin: 25px 0;
+}
+
+/* =========================
+   Forms
+========================= */
+form {
+    margin-bottom: 20px;
+}
+
+form textarea {
+    width: 100%;
+    min-height: 90px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: var(--font-body);
+    resize: vertical;
+    transition: all 0.3s ease;
+}
+
+form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 6px rgba(6,81,42,0.4);
+}
+
+form select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: var(--font-body);
+    font-size: 14px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+form select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 6px rgba(6,81,42,0.4);
+}
+
+form button {
+    background: linear-gradient(135deg, var(--primary-color), #1b4332);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background: var(--button-hover);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   Previous Notes
+========================= */
+.previous-notes p {
+    background-color: #fff;
+    padding: 12px 15px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.previous-notes small {
+    color: var(--gray-text);
+}
+
+/* =========================
+   Status Labels
+========================= */
+.status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+    color: white;
+}
+
+.status.Pending { background-color: #f4a261; }
+.status["In Progress"] { background-color: #2a9d8f; }
+.status["Inspection Scheduled"] { background-color: #2b9348; }
+.status.Resolved { background-color: #2b9348; }
+.status.Rejected { background-color: #d00000; }
+.status.Escalated { background-color: #9d0208; }
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    form textarea, form select, form button {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}

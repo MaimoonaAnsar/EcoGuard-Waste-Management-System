@@ -1,0 +1,223 @@
+/* =========================
+   Google Fonts
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* =========================
+   Root Variables
+========================= */
+:root {
+    --primary-color: #06512a;
+    --secondary-color: #f4f4f4;
+    --button-color: #06512a;
+    --button-hover: #04381b;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Roboto', sans-serif;
+    --shadow-sm: 0 2px 6px rgba(0,0,0,0.15);
+    --shadow-lg: 0 6px 18px rgba(0,0,0,0.2);
+    --off-white: #fdfdfd;
+    --gray-text: #666;
+}
+
+/* =========================
+   Global Styles
+========================= */
+body {
+    font-family: var(--font-body);
+    background-color: #fafafa;
+    color: #333;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* =========================
+   Dashboard Layout
+========================= */
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* =========================
+   Sidebar
+========================= */
+.sidebar {
+    width: 260px;
+    background: linear-gradient(180deg, #f4f4f4, #e8f5ec);
+    padding: 20px;
+    box-shadow: var(--shadow-lg);
+}
+
+/* Profile Box */
+.profile-box {
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.profile-box:hover {
+    transform: translateY(-3px);
+}
+
+.profile-box h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.profile-box p {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+    color: var(--gray-text);
+}
+
+.profile-box button {
+    background: linear-gradient(135deg, #06512a, #1b4332);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.profile-box button:hover {
+    transform: translateY(-2px);
+    background: #04381b;
+}
+
+/* Menu Buttons */
+.menu-buttons button {
+    display: block;
+    width: 100%;
+    background: linear-gradient(135deg, #06512a, #1b4332);
+    color: white;
+    border: none;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu-buttons button:hover {
+    background: #04381b;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   Main Content
+========================= */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    background-color: var(--secondary-color);
+}
+
+/* =========================
+   Complaint Cards
+========================= */
+.complaint-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.complaint-card {
+    background: linear-gradient(145deg, #ffffff, #f0f8f2);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.complaint-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.complaint-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.complaint-card p {
+    margin: 6px 0;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.complaint-card strong {
+    color: var(--primary-color);
+}
+
+/* =========================
+   Status Labels
+========================= */
+.status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+    color: white;
+    transition: all 0.3s;
+}
+
+.status.pending { background-color: #f4a261; }
+.status.inprogress { background-color: #2a9d8f; }
+.status.completed { background-color: #2b9348; }
+.status.rejected { background-color: #d00000; }
+
+/* =========================
+   Header
+========================= */
+header {
+    padding: 15px 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        box-shadow: none;
+        margin-bottom: 15px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .complaint-cards {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+}

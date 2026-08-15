@@ -1,0 +1,231 @@
+/* =========================
+   Google Fonts
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* =========================
+   Root Variables
+========================= */
+:root {
+    --primary-color: #06512a;
+    --secondary-color: #f4f4f4;
+    --button-color: #06512a;
+    --button-hover: #04381b;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Roboto', sans-serif;
+    --shadow-sm: 0 2px 6px rgba(0,0,0,0.15);
+    --shadow-lg: 0 6px 18px rgba(0,0,0,0.2);
+    --off-white: #fdfdfd;
+    --gray-text: #666;
+}
+
+/* =========================
+   Global Styles
+========================= */
+body {
+    font-family: var(--font-body);
+    background-color: #fafafa;
+    color: #333;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* =========================
+   Dashboard Layout
+========================= */
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* =========================
+   Sidebar
+========================= */
+.sidebar {
+    width: 260px;
+    background: linear-gradient(180deg, #f4f4f4, #e8f5ec);
+    padding: 20px;
+    box-shadow: var(--shadow-lg);
+}
+
+.sidebar button {
+    display: block;
+    width: 100%;
+    background: linear-gradient(135deg, #06512a, #1b4332);
+    color: white;
+    border: none;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sidebar button:hover {
+    background: #04381b;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   Main Content
+========================= */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =========================
+   Header
+========================= */
+header {
+    padding: 15px 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
+    color: var(--primary-color);
+}
+
+/* =========================
+   Complaint Form Styling
+========================= */
+.complaint-form {
+    background: linear-gradient(145deg, #ffffff, #f0f8f2);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 100%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.complaint-form:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.complaint-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.complaint-form input,
+.complaint-form select,
+.complaint-form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    transition: 0.3s ease;
+    background-color: #fdfdfd;
+}
+
+.complaint-form input:focus,
+.complaint-form select:focus,
+.complaint-form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(6,81,42,0.2);
+    outline: none;
+}
+
+.complaint-form textarea {
+    resize: vertical;
+}
+
+/* Buttons */
+.complaint-form button {
+    background: linear-gradient(135deg, #06512a, #1b4332);
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.complaint-form button:hover {
+    background: #04381b;
+    transform: translateY(-2px) scale(1.02);
+}
+
+/* =========================
+   Error and Success Messages
+========================= */
+.error {
+    background: #ffe5e5;
+    color: #b00020;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+}
+
+.success {
+    background: #e6f7ec;
+    color: #1b4332;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+}
+
+/* =========================
+   Input Focus & Animation
+========================= */
+.complaint-form input::placeholder,
+.complaint-form textarea::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+.complaint-form select {
+    cursor: pointer;
+    background-color: #fdfdfd;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        box-shadow: none;
+        margin-bottom: 15px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .complaint-form {
+        padding: 20px;
+    }
+}

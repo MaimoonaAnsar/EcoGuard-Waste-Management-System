@@ -1,0 +1,137 @@
+/* =========================
+   Google Fonts
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* =========================
+   Root Variables
+========================= */
+:root {
+    --primary-color: #06512a;
+    --secondary-color: #f4f4f4;
+    --button-color: #06512a;
+    --button-hover: #04381b;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Roboto', sans-serif;
+    --shadow-sm: 0 2px 6px rgba(0,0,0,0.15);
+    --shadow-lg: 0 6px 18px rgba(0,0,0,0.2);
+    --off-white: #fdfdfd;
+    --gray-text: #666;
+}
+
+/* =========================
+   Global Styles
+========================= */
+body {
+    font-family: var(--font-body);
+    background-color: #fafafa;
+    color: #333;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* =========================
+   Form Container
+========================= */
+.form-container {
+    background-color: var(--off-white);
+    padding: 40px 50px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.form-container h2 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 25px;
+}
+
+/* =========================
+   Form Inputs
+========================= */
+.form-container input[type="text"],
+.form-container input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border 0.3s;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="password"]:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* =========================
+   Login Button
+========================= */
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: linear-gradient(135deg, var(--primary-color), #1b4332);
+    border: none;
+    color: white;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.form-container button:hover {
+    background: var(--button-hover);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   Error Message
+========================= */
+.error {
+    color: #d00000;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   Links
+========================= */
+.form-container .link {
+    margin-top: 15px;
+    font-size: 13px;
+    color: var(--gray-text);
+}
+
+.form-container .link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.form-container .link a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+@media (max-width: 480px) {
+    .form-container {
+        padding: 30px 20px;
+    }
+}

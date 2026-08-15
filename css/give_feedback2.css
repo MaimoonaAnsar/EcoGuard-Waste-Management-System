@@ -1,0 +1,197 @@
+/* =========================
+   Google Fonts
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* =========================
+   Root Variables
+========================= */
+:root {
+    --primary-color: #06512a;
+    --secondary-color: #f4f4f4;
+    --button-color: #06512a;
+    --button-hover: #04381b;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Roboto', sans-serif;
+    --shadow-sm: 0 2px 6px rgba(0,0,0,0.15);
+    --shadow-lg: 0 6px 18px rgba(0,0,0,0.2);
+    --off-white: #fdfdfd;
+    --gray-text: #666;
+}
+
+/* =========================
+   Global Styles
+========================= */
+body {
+    font-family: var(--font-body);
+    background-color: #fafafa;
+    color: #333;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* =========================
+   Main Content
+========================= */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    background-color: var(--secondary-color);
+
+    /* Center all children */
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* horizontal centering */
+}
+
+/* =========================
+   Feedback Form
+========================= */
+.complaint-form {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    max-width: 650px;
+    width: 100%;           /* responsive */
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.complaint-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.complaint-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    resize: vertical;
+    transition: 0.2s ease;
+    margin-bottom: 16px;
+}
+
+.complaint-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(6,81,42,0.1);
+}
+
+.complaint-form button {
+    background: linear-gradient(135deg, #06512a, #1b4332);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.complaint-form button:hover {
+    background: #04381b;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   Feedback Cards
+========================= */
+.event-card {
+    background: linear-gradient(145deg, #ffffff, #f0f8f2);
+    padding: 18px 20px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    max-width: 650px;
+    width: 100%;
+}
+
+.event-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.event-card p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #444;
+}
+
+.event-card strong {
+    color: var(--primary-color);
+}
+
+/* Admin reply styling */
+.event-card p strong {
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+/* Awaiting reply */
+.event-card .pending-reply {
+    color: gray;
+    font-style: italic;
+}
+
+/* =========================
+   Messages
+========================= */
+.error {
+    background: #ffe5e5;
+    color: #b00020;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    box-shadow: var(--shadow-sm);
+}
+
+.success {
+    background: #e6f7ec;
+    color: #1b4332;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    box-shadow: var(--shadow-sm);
+}
+
+/* =========================
+   Header
+========================= */
+header {
+    padding: 15px 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 20px;
+        align-items: center;  /* keep centered on small screens */
+    }
+
+    .complaint-form,
+    .event-card {
+        width: 100%;  /* full width for small screens */
+    }
+}

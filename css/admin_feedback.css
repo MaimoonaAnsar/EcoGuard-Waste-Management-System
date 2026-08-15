@@ -1,0 +1,202 @@
+/* =========================
+   Google Fonts
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* =========================
+   Root Variables
+========================= */
+:root {
+    --primary-color: #06512a;
+    --secondary-color: #f4f4f4;
+    --button-color: #06512a;
+    --button-hover: #04381b;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Roboto', sans-serif;
+    --shadow-sm: 0 2px 6px rgba(0,0,0,0.15);
+    --shadow-lg: 0 6px 18px rgba(0,0,0,0.2);
+    --gray-text: #666;
+    --success-color: #2b9348;
+}
+
+/* =========================
+   Global Styles
+========================= */
+body {
+    font-family: var(--font-body);
+    background-color: var(--secondary-color);
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--button-hover);
+}
+
+/* =========================
+   Dashboard Layout
+========================= */
+.dashboard {
+    display: flex;
+    gap: 20px;
+    min-height: 80vh;
+}
+
+/* =========================
+   Sidebar
+========================= */
+.sidebar {
+    width: 260px;
+    background: linear-gradient(180deg, #f4f4f4, #e8f5ec);
+    padding: 20px;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.sidebar p {
+    font-size: 0.9rem;
+    color: var(--gray-text);
+    margin: 0.3rem 0;
+}
+
+.sidebar button {
+    display: block;
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary-color), #1b4332);
+    color: white;
+    border: none;
+    padding: 10px 0;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sidebar button:hover {
+    background: var(--button-hover);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   Main Content
+========================= */
+.main-content {
+    flex: 1;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+}
+
+/* =========================
+   Feedback Cards
+========================= */
+.feedback-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #fdfdfd;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.feedback-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.feedback-card h4 {
+    margin: 0 0 8px 0;
+    color: var(--primary-color);
+}
+
+.feedback-card p {
+    margin: 4px 0;
+    line-height: 1.4;
+}
+
+/* =========================
+   Reply Form
+========================= */
+.feedback-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.feedback-card textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-family: var(--font-body);
+    resize: vertical;
+    font-size: 14px;
+}
+
+.feedback-card button {
+    align-self: flex-start;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    background: linear-gradient(135deg, var(--primary-color), #1b4332);
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.feedback-card button:hover {
+    background: var(--button-hover);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   Success Message
+========================= */
+.success-msg {
+    color: var(--success-color);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+}

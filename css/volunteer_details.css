@@ -1,0 +1,195 @@
+/* =========================
+   Google Fonts
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* =========================
+   Root Variables
+========================= */
+:root {
+    --primary-color: #06512a;
+    --secondary-color: #f4f4f4;
+    --button-color: #06512a;
+    --button-hover: #04381b;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Roboto', sans-serif;
+    --shadow-sm: 0 2px 6px rgba(0,0,0,0.15);
+    --shadow-lg: 0 6px 18px rgba(0,0,0,0.2);
+    --off-white: #fdfdfd;
+    --gray-text: #666;
+}
+
+/* =========================
+   Global Styles
+========================= */
+body {
+    font-family: var(--font-body);
+    background: #fafafa;
+    margin: 0;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #06512a, #1b4332);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: var(--shadow-lg);
+}
+
+header h1 {
+    margin: 0;
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+}
+
+/* =========================
+   Main Container
+========================= */
+.event-details {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* =========================
+   Event Image
+========================= */
+.event-image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.event-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+}
+
+/* =========================
+   Typography
+========================= */
+h2 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-top: 10px;
+}
+
+p {
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+strong {
+    color: var(--primary-color);
+}
+
+/* =========================
+   Messages
+========================= */
+p[style*="green"] {
+    background: #e9f5ee;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+p[style*="red"] {
+    background: #fdecea;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+p[style*="blue"] {
+    background: #e7f1ff;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+p[style*="orange"] {
+    background: #fff4e5;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+/* =========================
+   Buttons
+========================= */
+button {
+    background: linear-gradient(135deg, #06512a, #1b4332);
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+button:hover {
+    background: var(--button-hover);
+    transform: translateY(-2px);
+}
+
+/* Back Button */
+button:last-of-type {
+    margin-top: 20px;
+}
+
+/* =========================
+   Form Styling
+========================= */
+form {
+    margin-top: 15px;
+}
+
+input[type="file"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+    cursor: pointer;
+}
+
+/* =========================
+   Proof Image
+========================= */
+img[src*="uploads"] {
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+}
+
+/* =========================
+   Animation
+========================= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   Responsive Design
+========================= */
+@media (max-width: 768px) {
+    .event-details {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .event-image img {
+        width: 100%;
+    }
+}

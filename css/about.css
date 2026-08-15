@@ -1,0 +1,153 @@
+/* =========================
+   Google Fonts
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* =========================
+   Root Variables
+========================= */
+:root {
+    --primary-color: #06512a;
+    --secondary-color: #f4f4f4;
+    --accent-color: #1b4332;
+    --button-hover: #04381b;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Roboto', sans-serif;
+    --shadow-sm: 0 2px 6px rgba(0,0,0,0.15);
+    --shadow-lg: 0 6px 18px rgba(0,0,0,0.2);
+    --gray-text: #666;
+}
+
+/* =========================
+   Global Styles
+========================= */
+body {
+    font-family: var(--font-body);
+    background-color: #fafafa;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* =========================
+   Container
+========================= */
+.about-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* =========================
+   Hero Section
+========================= */
+.hero {
+    text-align: center;
+    background: linear-gradient(135deg, #e8f5ec, #f4f4f4);
+    padding: 60px 20px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 50px;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    color: #444;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* =========================
+   Cards Section
+========================= */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.card {
+    background: #fff;
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    border: 1px solid #ccc;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.card p, .card ul {
+    font-size: 14.5px;
+    color: #444;
+}
+
+.card ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.card ul li {
+    margin-bottom: 8px;
+}
+
+/* =========================
+   Call to Action Section
+========================= */
+.cta {
+    text-align: center;
+    background: linear-gradient(135deg, #e8f5ec, #f4f4f4);
+    padding: 50px 20px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+}
+
+.cta h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #444;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+@media (max-width: 768px) {
+    .hero {
+        padding: 40px 15px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .cta {
+        padding: 40px 15px;
+    }
+}

@@ -1,0 +1,129 @@
+/* =========================
+   Google Fonts
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* =========================
+   Root Variables
+========================= */
+:root {
+    --primary-color: #06512a;
+    --secondary-color: #f4f4f4;
+    --button-color: #06512a;
+    --button-hover: #04381b;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Roboto', sans-serif;
+    --shadow-sm: 0 2px 6px rgba(0,0,0,0.15);
+    --shadow-lg: 0 6px 18px rgba(0,0,0,0.2);
+    --gray-text: #666;
+}
+
+/* =========================
+   Global Styles
+========================= */
+body {
+    font-family: var(--font-body);
+    background-color: #fafafa;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* =========================
+   Certificate Cards
+========================= */
+.certificate-card {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px auto;
+    width: 280px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.certificate-card img,
+.certificate-card embed {
+    max-width: 100%;
+    max-height: 250px;
+    display: block;
+    margin: 10px auto;
+    border-radius: 6px;
+}
+
+.certificate-info {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.certificate-info strong {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.certificate-actions {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.certificate-actions a {
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, var(--primary-color), #1b4332);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+
+.certificate-actions a:hover {
+    background: var(--button-hover);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   Back Button
+========================= */
+button {
+    background: linear-gradient(135deg, var(--primary-color), #1b4332);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 30px auto 0;
+}
+
+button:hover {
+    background: var(--button-hover);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 768px) {
+    .certificate-card {
+        width: 90%;
+    }
+}

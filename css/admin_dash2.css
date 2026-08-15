@@ -1,0 +1,253 @@
+/* =========================
+   Google Fonts
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* =========================
+   Root Variables
+========================= */
+:root {
+    --primary-color: #06512a;
+    --secondary-color: #f4f4f4;
+    --button-color: #06512a;
+    --button-hover: #04381b;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Roboto', sans-serif;
+    --shadow-sm: 0 2px 6px rgba(0,0,0,0.15);
+    --shadow-lg: 0 6px 18px rgba(0,0,0,0.2);
+    --gray-text: #666;
+}
+
+/* =========================
+   Global Styles
+========================= */
+body {
+    font-family: var(--font-body);
+    background-color: var(--secondary-color);
+    color: #333;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--button-hover);
+}
+
+/* =========================
+   Dashboard Layout
+========================= */
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+    gap: 20px;
+}
+
+/* =========================
+   Sidebar
+========================= */
+.sidebar {
+    width: 260px;
+    background: linear-gradient(180deg, #f4f4f4, #e8f5ec);
+    padding: 20px;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.sidebar p {
+    font-size: 0.9rem;
+    color: var(--gray-text);
+    margin: 0.3rem 0;
+}
+
+.sidebar button {
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary-color), #1b4332);
+    color: white;
+    border: none;
+    padding: 10px 0;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sidebar button:hover {
+    background: var(--button-hover);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   Main Content
+========================= */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: var(--secondary-color);
+}
+
+/* Section Headings */
+.main-content h2 {
+    margin-bottom: 20px;
+}
+
+/* =========================
+   Tables
+========================= */
+.main-content table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    background-color: white;
+    margin-bottom: 25px;
+}
+
+.main-content th {
+    background: linear-gradient(135deg, var(--primary-color), #1b4332);
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 14px;
+    letter-spacing: 0.5px;
+}
+
+.main-content td {
+    padding: 14px;
+    font-size: 14px;
+    color: #444;
+}
+
+.main-content tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.main-content tr {
+    transition: all 0.2s ease;
+}
+
+.main-content tr:hover {
+    background-color: #e9f5ee;
+    transform: scale(1.01);
+}
+
+.main-content td:first-child {
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.main-content td:nth-child(2) {
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* =========================
+   Status Labels
+========================= */
+.status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+    color: white;
+}
+
+.status.pending { background-color: #f4a261; }
+.status.inprogress { background-color: #2a9d8f; }
+.status.completed { background-color: #2b9348; }
+.status.rejected { background-color: #d00000; }
+
+/* =========================
+   Volunteer Form
+========================= */
+.volunteer-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+}
+
+.volunteer-form input,
+.volunteer-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.volunteer-form input:focus,
+.volunteer-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.volunteer-form button {
+    align-self: flex-start;
+    background: linear-gradient(135deg, var(--primary-color), #1b4332);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.volunteer-form button:hover {
+    background: var(--button-hover);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   Success Message
+========================= */
+.success-message {
+    font-weight: 500;
+    color: #2b9348;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .main-content {
+        padding: 20px;
+        gap: 25px;
+    }
+}

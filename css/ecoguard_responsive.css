@@ -1,0 +1,89 @@
+/* EcoGuard final responsive layer - loaded after legacy page CSS */
+:root{
+  --eg-green:#214d38;
+  --eg-green-2:#2f654b;
+  --eg-green-3:#5f806d;
+  --eg-beige:#f3eee2;
+  --eg-cream:#fffdf8;
+  --eg-border:#ddd8c9;
+}
+html,body{max-width:100%;overflow-x:hidden}
+img,svg,video,iframe{max-width:100%;height:auto}
+button,input,select,textarea{max-width:100%}
+
+/* Keep every dashboard inside the viewport */
+.dashboard{width:min(1320px,100%);max-width:100%;margin:24px auto!important;padding:0 18px!important;display:flex!important;gap:22px!important;align-items:flex-start!important;min-height:0!important}
+.sidebar{width:260px!important;min-width:0!important;flex:0 0 260px!important;box-sizing:border-box!important;position:sticky!important;top:88px!important;border-radius:16px!important}
+.main-content{min-width:0!important;max-width:100%!important;flex:1 1 auto!important;box-sizing:border-box!important;border-radius:16px!important;overflow:visible!important}
+.main-content table{display:table;width:100%;min-width:680px;max-width:none}
+.table-wrap{width:100%;max-width:100%;overflow-x:auto!important;overflow-y:hidden!important;-webkit-overflow-scrolling:touch}
+
+/* Common page banner */
+body>header:not(.site-header):not(.admin-header),
+.dashboard~header{box-sizing:border-box}
+
+/* Workflow */
+.eg-workflow{width:100%;max-width:100%;box-sizing:border-box}
+.eg-flow{min-width:0}
+.eg-role-card{min-width:0}
+.eg-role-content{overflow-wrap:anywhere}
+
+/* Map/schedule */
+.eg-dashboard-grid{width:100%;min-width:0}
+.eg-panel{min-width:0;overflow:hidden}
+.eg-map{width:100%;max-width:100%;position:relative}
+
+/* Admin top bar */
+.admin-header{width:100%;box-sizing:border-box}
+.admin-top{width:100%;box-sizing:border-box}
+.admin-tabs{width:100%;box-sizing:border-box}
+
+@media (max-width:1100px){
+  .dashboard{gap:16px!important}
+  .sidebar{width:230px!important;flex-basis:230px!important}
+  .main-content{padding:22px!important}
+  .eg-flow{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px!important}
+  .eg-flow-arrow{display:none!important}
+  .eg-dashboard-grid{grid-template-columns:1fr!important}
+}
+
+@media (max-width:800px){
+  .dashboard{display:flex!important;flex-direction:column!important;width:100%!important;margin:16px auto!important;padding:0 12px!important;gap:14px!important}
+  .sidebar{position:static!important;width:100%!important;flex:0 0 auto!important;padding:18px!important}
+  .main-content{width:100%!important;padding:18px!important}
+  .eg-page-header{width:100%!important;padding:0 12px!important}
+  .eg-flow{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:0!important}
+  .eg-flow-arrow{display:block!important;width:2px!important;height:20px!important;flex:0 0 20px!important;margin:0 auto!important}
+  .eg-flow-arrow:after{right:auto!important;top:auto!important;bottom:-1px!important;left:50%!important;transform:translateX(-50%) rotate(45deg)!important}
+  .eg-workflow-header{display:block!important}
+  .eg-system-status{display:inline-block;margin-top:12px}
+  .eg-dashboard-grid{display:grid!important;grid-template-columns:1fr!important}
+  .table-wrap{margin-left:0!important;margin-right:0!important}
+  .main-content table{min-width:680px!important}
+
+  .site-header .header-container{min-height:64px!important;padding:0 14px!important}
+  .site-header .mobile-menu-btn{display:block!important;margin-left:auto!important}
+  .site-header .main-nav{display:none;position:absolute;top:64px;left:12px;right:12px;z-index:2000;flex-direction:column!important;align-items:stretch!important;gap:2px!important;background:var(--eg-green)!important;border-radius:14px!important;padding:8px!important;box-shadow:0 14px 36px rgba(0,0,0,.18)!important}
+  .site-header .main-nav.is-open{display:flex!important}
+  .site-header .main-nav a{padding:11px 12px!important}
+
+  .admin-top{padding:10px 14px!important}
+  .admin-tabs{justify-content:flex-start!important;overflow-x:auto!important;flex-wrap:nowrap!important;gap:8px!important;padding:8px 12px!important;-webkit-overflow-scrolling:touch!important}
+  .admin-tabs a{white-space:nowrap!important;flex:0 0 auto!important}
+}
+
+@media (max-width:520px){
+  .dashboard{padding:0 10px!important}
+  .main-content{padding:14px!important}
+  .sidebar{padding:14px!important}
+  .eg-workflow{padding:15px!important;border-radius:15px!important}
+  .eg-panel{padding:14px!important}
+  .eg-map{height:280px!important}
+  .eg-role-card{padding:11px!important}
+  .eg-role-icon{width:37px!important;height:37px!important;flex-basis:37px!important}
+  .form-container{width:calc(100% - 20px)!important;margin:20px auto!important;padding:22px 16px!important}
+  .admin-icons a{margin-left:8px!important}
+}
+.eg-role-workflow{margin:18px auto;max-width:min(1320px,calc(100% - 36px));}
+.eg-role-workflow + .dashboard{margin-top:14px!important}
+@media(max-width:800px){.eg-role-workflow{max-width:calc(100% - 24px);margin:14px auto}.eg-role-workflow .eg-workflow-header h2{font-size:17px}}
